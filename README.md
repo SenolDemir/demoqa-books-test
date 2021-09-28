@@ -31,7 +31,7 @@ www.linkedin.com/in/senoldemir
 
 #### 1. Way:
  - Clone the projects from Github
- - In the project folder open a command line and invoke  
+ - In the project folder open a command line and invoke:  
    `npx cypress open`
 
  
