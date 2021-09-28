@@ -32,7 +32,7 @@ www.linkedin.com/in/senoldemir
 #### 1. Way:
  - Clone the projects from Github
  - in the project folder open a command line and invoke
-    npx cypress open
+    `npx cypress open`
 
  
 
