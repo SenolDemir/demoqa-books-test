@@ -31,8 +31,8 @@ www.linkedin.com/in/senoldemir
 
 #### 1. Way:
  - Clone the projects from Github
- - in the project folder open a command line and invoke 
-    `npx cypress open`
+ - In the project folder open a command line and invoke 
+   `npx cypress open`
 
  
 
@@ -40,15 +40,16 @@ www.linkedin.com/in/senoldemir
  
 
 ## Test Framework : Cypress with Page Object Model Design
-- I am using Page Object Modelling to enhance test maintenance and reducing code duplication. This is one of the most famous automation approch
+- I am using Page Object Modelling to enhance test maintenance and reducing code duplication. This is one of the most famous automation approach
 - I used npm package manager to add and keep updated the dependencies
 - I used cypress.json file to create and reuse environment variables
 - I used support folder to create page objects to be able to make code clean and reuse easily whan needed
+
 
  
  
 ------------
 
-2021 Eylul;
+September 2021
 
 
