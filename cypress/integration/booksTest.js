@@ -10,11 +10,11 @@ describe('Books Store Function Test',() => {
         
     })
 
-    it('Page Layout Test', () => {
+    it('Books Store Page layout function should work correctly', () => {
 
         navigateTo.booksPage()
         
-        // Deafult page layou size is 10 rows. We assert this at first.
+        // Deafult page layout size is 10 rows. We assert this at first.
         cy.get('select option:selected').should('have.text', '10 rows')
 
         // We are changing the layout size of page as 5 rows and assert whether it is done or not
@@ -29,7 +29,7 @@ describe('Books Store Function Test',() => {
         
     });
 
-    it('API should return the list of books in application ', () => {
+    it('Stored books date should be same in Frontend and Backend', () => {
 
         cy.request({
             method: 'GET',
@@ -50,10 +50,12 @@ describe('Books Store Function Test',() => {
         
     })
     
-    it.only('verify first book data is same with the backend side ', () => {
+    it.only('vVerify first book data is displayed same as in the backend side ', () => {
         let title = 'Git Pocket Guide'
         let author = 'Richard E. Silverman'
         let publisher = 'O\'Reilly Media'
+
+        //3. Get the title, aothor, publisher  information of first book in the backend by using API Service
         cy.request({
             method: 'GET',
             url: 'https://demoqa.com/BookStore/v1/Books'
@@ -66,7 +68,7 @@ describe('Books Store Function Test',() => {
 
         })
 
-        //cy.get('[role="rowgroup"]')
+        //4. Get the title, aothor, publisher information of book first displayed in the page
         cy.get('.rt-tbody').find('[role="rowgroup"]').then((tableRow) => {
             cy.wrap(tableRow).find('[role="gridcell"]').eq(1).should('contain', title)
             cy.wrap(tableRow).find('[role="gridcell"]').eq(2).should('contain', author)

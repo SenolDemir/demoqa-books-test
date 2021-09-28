@@ -1,7 +1,7 @@
 import *as navigateTo from '../support/navigationPage';
 
 
-describe('Page Menu Buttons display correctly', () => {
+describe('Page Menu Buttons should be display correctly', () => {
 
     before('Navigate to main page', () => {
     
