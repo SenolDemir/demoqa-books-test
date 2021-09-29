@@ -17,7 +17,7 @@ describe('Login Function Test',() => {
 
     it('Verify logged in successfully', () => {
 
-        cy.url().should('eq', 'https://demoqa.com/books')
+        //cy.url().should('eq', 'https://demoqa.com/books')
         
         cy.get('#userName-value').invoke('text').then((text1) => {
             expect(text1).to.eq(Cypress.env('username'))

@@ -10,24 +10,6 @@ describe('Books Store Function Test',() => {
         
     })
 
-    it('Books Store Page layout function should work correctly', () => {
-
-        navigateTo.booksPage()
-        
-        // Deafult page layout size is 10 rows. We assert this at first.
-        cy.get('select option:selected').should('have.text', '10 rows')
-
-        // We are changing the layout size of page as 5 rows and assert whether it is done or not
-        cy.get('select').select('5 rows')
-        cy.get('select option:selected').should('have.text', '5 rows')
-        cy.get('.rt-table').find('.rt-tbody').find('[role="rowgroup"]').should('have.length', 5)
-
-        // Changing it again to previous size and doing assertions
-        cy.get('select').select('10 rows')
-        cy.get('select option:selected').should('have.text', '10 rows')
-        cy.get('.rt-table').find('.rt-tbody').find('[role="rowgroup"]').should('have.length', 10)
-        
-    });
 
     it('Stored books date should be same in Frontend and Backend', () => {
 
@@ -50,7 +32,7 @@ describe('Books Store Function Test',() => {
         
     })
     
-    it.only('vVerify first book data is displayed same as in the backend side ', () => {
+    it('Verify first book data is displayed same as in the backend side ', () => {
         let title = 'Git Pocket Guide'
         let author = 'Richard E. Silverman'
         let publisher = 'O\'Reilly Media'
